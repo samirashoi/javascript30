@@ -18,6 +18,12 @@ function setTime(){
     const hourDeg = (hour/12 * 360) + 90;
     hourHand.style.transform = `rotate(${hourDeg}deg)`;
 
+    if (seconds === 0){
+        secondHand.style.transition = `none`;
+    }
+    else{
+        secondHand.style.transition = `all 0.05s`;
+    }
 }
 
 setInterval(setTime, 1000);
